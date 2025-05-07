@@ -57,6 +57,8 @@ public class Main {
 // 4. Close
     Main m = new Main();
     Connection con = m.get_Db_connection();
+    Database_Read dr = new Database_Read(con);
+    dr.read();
     try{
         con.close();
         System.out.println("Connection is closed.");
